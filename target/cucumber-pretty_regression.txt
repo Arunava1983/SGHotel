@@ -1,0 +1,50 @@
+Feature: Check filter price is working fine
+
+  @regression
+  Scenario Outline: Filter from High to Low                                  # filterPrice.feature:4
+    Given user is on Singapore Hotel search page
+    When user selects the destination
+    And user selects checkin Date
+    And user selects checkout date
+    And selects "1" Room, "1" Adult, "0" Children and click on Search button
+    And select the popular Filters
+    And selects price filter <priceFilter>
+    Then price will be filtered in <order>
+
+    Examples: 
+
+  @regression
+  Scenario Outline: Filter from High to Low                                  # filterPrice.feature:20
+    Given user is on Singapore Hotel search page                             # filterPriceSteps.user_launches_the_website()
+    When user selects the destination                                        # filterPriceSteps.user_selects_the_destination(DataTable)
+    And user selects checkin Date                                            # filterPriceSteps.user_selects_checkin_date(DataTable)
+    And user selects checkout date                                           # filterPriceSteps.user_selects_checkout_date(DataTable)
+    And selects "1" Room, "1" Adult, "0" Children and click on Search button # filterPriceSteps.selects_Room_Adult_Children_and_click_on_Search_button(String,String,String)
+    And select the popular Filters                                           # filterPriceSteps.select_the_popular_filters(DataTable)
+    And selects price filter low to high                                     # filterPriceSteps.selects_price_filter(String)
+    Then price will be filtered in ascending                                 # filterPriceSteps.price_will_be_filtered_in(String)
+      java.lang.AssertionError: Price is not sorted in ascending oder
+      	at org.junit.Assert.fail(Assert.java:88)
+      	at org.junit.Assert.assertTrue(Assert.java:41)
+      	at Cucumber.SGhotel.Pages.ChoseHotel.checkAscendingDescendingOrder(ChoseHotel.java:108)
+      	at Cucumber.SGhotel.StepDefinition.filterPriceSteps.price_will_be_filtered_in(filterPriceSteps.java:65)
+      	at ✽.Then price will be filtered in ascending(filterPrice.feature:16)
+
+
+  @regression
+  Scenario Outline: Filter from High to Low                                  # filterPrice.feature:21
+    Given user is on Singapore Hotel search page                             # filterPriceSteps.user_launches_the_website()
+    When user selects the destination                                        # filterPriceSteps.user_selects_the_destination(DataTable)
+    And user selects checkin Date                                            # filterPriceSteps.user_selects_checkin_date(DataTable)
+    And user selects checkout date                                           # filterPriceSteps.user_selects_checkout_date(DataTable)
+    And selects "1" Room, "1" Adult, "0" Children and click on Search button # filterPriceSteps.selects_Room_Adult_Children_and_click_on_Search_button(String,String,String)
+    And select the popular Filters                                           # filterPriceSteps.select_the_popular_filters(DataTable)
+    And selects price filter high to low                                     # filterPriceSteps.selects_price_filter(String)
+    Then price will be filtered in descending                                # filterPriceSteps.price_will_be_filtered_in(String)
+      java.lang.AssertionError: Price is not sorted in ascending oder
+      	at org.junit.Assert.fail(Assert.java:88)
+      	at org.junit.Assert.assertTrue(Assert.java:41)
+      	at Cucumber.SGhotel.Pages.ChoseHotel.checkAscendingDescendingOrder(ChoseHotel.java:108)
+      	at Cucumber.SGhotel.StepDefinition.filterPriceSteps.price_will_be_filtered_in(filterPriceSteps.java:65)
+      	at ✽.Then price will be filtered in descending(filterPrice.feature:16)
+

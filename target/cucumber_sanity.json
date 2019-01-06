@@ -1,0 +1,95 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 24568482008,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.setup()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Verify Login functionality",
+        "description": "",
+        "id": "check-filter-price-is-working-fine;verify-login-functionality",
+        "after": [
+          {
+            "result": {
+              "duration": 237605,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.afterScenario(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 986515031,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hook.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13294042330,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user is on Singapore Hotel registration page",
+            "match": {
+              "location": "filterPriceSteps.user_is_on_singapore_hotel_registration_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6838343561,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user enters valid inputs",
+            "match": {
+              "location": "filterPriceSteps.user_enters_valid_inputs()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5597799256,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user should be successfully able to register",
+            "match": {
+              "location": "filterPriceSteps.user_should_be_successfully_able_to_register()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 23,
+            "name": "@sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Check filter price is working fine",
+    "description": "",
+    "id": "check-filter-price-is-working-fine",
+    "keyword": "Feature",
+    "uri": "filterPrice.feature"
+  }
+]

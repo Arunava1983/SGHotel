@@ -1,0 +1,165 @@
+[
+  {
+    "source": "^user is on Singapore Hotel search page$",
+    "steps": [
+      {
+        "name": "user is on Singapore Hotel search page",
+        "aggregatedDurations": {
+          "average": 1.172584031,
+          "median": 1.172584031
+        },
+        "durations": [
+          {
+            "duration": 2.273310827,
+            "location": "filterPrice.feature:5"
+          },
+          {
+            "duration": 0.071857235,
+            "location": "filterPrice.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user selects checkout date$",
+    "steps": [
+      {
+        "name": "user selects checkout date",
+        "aggregatedDurations": {
+          "average": 1.269023482,
+          "median": 1.269023482
+        },
+        "durations": [
+          {
+            "duration": 1.281188287,
+            "location": "filterPrice.feature:10"
+          },
+          {
+            "duration": 1.256858677,
+            "location": "filterPrice.feature:10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user selects the destination$",
+    "steps": [
+      {
+        "name": "user selects the destination",
+        "aggregatedDurations": {
+          "average": 10.914763101,
+          "median": 10.914763101
+        },
+        "durations": [
+          {
+            "duration": 10.966418,
+            "location": "filterPrice.feature:6"
+          },
+          {
+            "duration": 10.863108203,
+            "location": "filterPrice.feature:6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^selects price filter (.+)$",
+    "steps": [
+      {
+        "name": "selects price filter low to high",
+        "aggregatedDurations": {
+          "average": 2.043950092,
+          "median": 2.043950092
+        },
+        "durations": [
+          {
+            "duration": 2.043950092,
+            "location": "filterPrice.feature:15"
+          }
+        ]
+      },
+      {
+        "name": "selects price filter high to low",
+        "aggregatedDurations": {
+          "average": 1.231442167,
+          "median": 1.231442167
+        },
+        "durations": [
+          {
+            "duration": 1.231442167,
+            "location": "filterPrice.feature:15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user selects checkin Date$",
+    "steps": [
+      {
+        "name": "user selects checkin Date",
+        "aggregatedDurations": {
+          "average": 1.299613444,
+          "median": 1.299613444
+        },
+        "durations": [
+          {
+            "duration": 1.319643955,
+            "location": "filterPrice.feature:8"
+          },
+          {
+            "duration": 1.279582933,
+            "location": "filterPrice.feature:8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^selects \"([^\"]*)\" Room, \"([^\"]*)\" Adult, \"([^\"]*)\" Children and click on Search button$",
+    "steps": [
+      {
+        "name": "selects \"1\" Room, \"1\" Adult, \"0\" Children and click on Search button",
+        "aggregatedDurations": {
+          "average": 6.684841866,
+          "median": 6.684841866
+        },
+        "durations": [
+          {
+            "duration": 7.483253033,
+            "location": "filterPrice.feature:12"
+          },
+          {
+            "duration": 5.8864307,
+            "location": "filterPrice.feature:12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^select the popular Filters$",
+    "steps": [
+      {
+        "name": "select the popular Filters",
+        "aggregatedDurations": {
+          "average": 3.016307142,
+          "median": 3.016307142
+        },
+        "durations": [
+          {
+            "duration": 2.767676858,
+            "location": "filterPrice.feature:13"
+          },
+          {
+            "duration": 3.264937426,
+            "location": "filterPrice.feature:13"
+          }
+        ]
+      }
+    ]
+  }
+]

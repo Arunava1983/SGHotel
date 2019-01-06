@@ -1,0 +1,28 @@
+Feature: Check filter price is working fine
+
+  @sanity
+  Scenario: Verify Login functionality                 [90m# filterPrice.feature:24[0m
+    [32mGiven [0m[32muser is on Singapore Hotel registration page[0m [90m# filterPriceSteps.user_is_on_singapore_hotel_registration_page()[0m
+    [32mWhen [0m[32muser enters valid inputs[0m                      [90m# filterPriceSteps.user_enters_valid_inputs()[0m
+    [32mThen [0m[32muser should be successfully able to register[0m  [90m# filterPriceSteps.user_should_b
+  @regression
+  Scenario Outline: Filter from High to Low                                  # filterPrice.feature:20
+    Given user is on Singapore Hotel search page                             # filterPriceSteps.user_launches_the_website()
+    When user selects the destination                                        # filterPriceSteps.user_selects_the_destination(DataTable)
+    And user selects checkin Date                                            # filterPriceSteps.user_selects_checkin_date(DataTable)
+    And user selects checkout date                                           # filterPriceSteps.user_selects_checkout_date(DataTable)
+    And selects "1" Room, "1" Adult, "0" Children and click on Search button # filterPriceSteps.selects_Room_Adult_Children_and_click_on_Search_button(String,String,String)
+    And select the popular Filters                                           # filterPriceSteps.select_the_popular_filters(DataTable)
+    And selects price filter low to high                                     # filterPriceSteps.selects_price_filter(String)
+    Then price will be filtered in ascending                                 # filterPriceSteps.price_will_be_filtered_in(String)
+
+  @regression
+  Scenario Outline: Filter from High to Low                                  # filterPrice.feature:21
+    Given user is on Singapore Hotel search page                             # filterPriceSteps.user_launches_the_website()
+    When user selects the destination                                        # filterPriceSteps.user_selects_the_destination(DataTable)
+    And user selects checkin Date                                            # filterPriceSteps.user_selects_checkin_date(DataTable)
+    And user selects checkout date                                           # filterPriceSteps.user_selects_checkout_date(DataTable)
+    And selects "1" Room, "1" Adult, "0" Children and click on Search button # filterPriceSteps.selects_Room_Adult_Children_and_click_on_Search_button(String,String,String)
+    And select the popular Filters                                           # filterPriceSteps.select_the_popular_filters(DataTable)
+    And selects price filter high to low                                     # filterPriceSteps.selects_price_filter(String)
+    Then price will be filtered in descending                                # filterPriceSteps.price_will_be_filtered_in(String)

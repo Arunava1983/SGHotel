@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configeration>
+	<URL>https://sg.hotels.com</URL>
+	<!-- Chrome,Firefox,IE -->
+	<Browser>Chrome</Browser>
+	<ImplicitWait>60</ImplicitWait>
+	<ExplicitWait>10</ExplicitWait>
+</Configeration>

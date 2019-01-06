@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="162.085827">
+<testcase classname="Check filter price is working fine" name="Filter from High to Low" time="109.062811">
+<system-out><![CDATA[Given user is on Singapore Hotel search page................................passed
+When user selects the destination...........................................passed
+And user selects checkin Date...............................................passed
+And user selects checkout date..............................................passed
+And selects "1" Room, "1" Adult, "0" Children and click on Search button....passed
+And select the popular Filters..............................................passed
+And selects price filter low to high........................................passed
+Then price will be filtered in ascending....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check filter price is working fine" name="Filter from High to Low 2" time="53.023016">
+<system-out><![CDATA[Given user is on Singapore Hotel search page................................passed
+When user selects the destination...........................................passed
+And user selects checkin Date...............................................passed
+And user selects checkout date..............................................passed
+And selects "1" Room, "1" Adult, "0" Children and click on Search button....passed
+And select the popular Filters..............................................passed
+And selects price filter high to low........................................passed
+Then price will be filtered in descending...................................passed
+]]></system-out>
+</testcase>
+</testsuite>

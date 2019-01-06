@@ -1,0 +1,56 @@
+[
+  {
+    "source": "^user should be successfully able to register$",
+    "steps": [
+      {
+        "name": "user should be successfully able to register",
+        "aggregatedDurations": {
+          "average": 5.597799256,
+          "median": 5.597799256
+        },
+        "durations": [
+          {
+            "duration": 5.597799256,
+            "location": "filterPrice.feature:27"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user is on Singapore Hotel registration page$",
+    "steps": [
+      {
+        "name": "user is on Singapore Hotel registration page",
+        "aggregatedDurations": {
+          "average": 13.29404233,
+          "median": 13.29404233
+        },
+        "durations": [
+          {
+            "duration": 13.29404233,
+            "location": "filterPrice.feature:25"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^user enters valid inputs$",
+    "steps": [
+      {
+        "name": "user enters valid inputs",
+        "aggregatedDurations": {
+          "average": 6.838343561,
+          "median": 6.838343561
+        },
+        "durations": [
+          {
+            "duration": 6.838343561,
+            "location": "filterPrice.feature:26"
+          }
+        ]
+      }
+    ]
+  }
+]

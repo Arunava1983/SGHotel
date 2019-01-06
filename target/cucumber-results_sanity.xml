@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="51.28542">
+<testcase classname="Check filter price is working fine" name="Verify Login functionality" time="51.28542">
+<system-out><![CDATA[Given user is on Singapore Hotel registration page..........................passed
+When user enters valid inputs...............................................passed
+Then user should be successfully able to register...........................passed
+]]></system-out>
+</testcase>
+</testsuite>

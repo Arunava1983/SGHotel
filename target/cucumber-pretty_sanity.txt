@@ -1,0 +1,7 @@
+Feature: Check filter price is working fine
+
+  @sanity
+  Scenario: Verify Login functionality                 [90m# filterPrice.feature:24[0m
+    [32mGiven [0m[32muser is on Singapore Hotel registration page[0m [90m# filterPriceSteps.user_is_on_singapore_hotel_registration_page()[0m
+    [32mWhen [0m[32muser enters valid inputs[0m                      [90m# filterPriceSteps.user_enters_valid_inputs()[0m
+    [32mThen [0m[32muser should be successfully able to register[0m  [90m# filterPriceSteps.user_should_be_successfully_able_to_register()[0m
