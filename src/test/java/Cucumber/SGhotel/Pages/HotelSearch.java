@@ -149,4 +149,17 @@ public class HotelSearch{
 		rs.pageSync();
 		return PageFactory.initElements(driver, ChoseHotel.class);
 	}
+	
+	/**
+	 * @description: Navigate to Registration page
+	 * @author: Arunava
+	 */
+	public Registration NavigateToRegistrationPage()
+	{
+		rs.logClick(lnkSinginAndAccount);
+		rs.logClick(lnkCreateAccount);
+		
+		rs.pageSync();
+		return PageFactory.initElements(driver, Registration.class);
+	}
 }

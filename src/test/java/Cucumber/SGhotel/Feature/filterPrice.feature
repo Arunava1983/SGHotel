@@ -1,7 +1,7 @@
 Feature: Check filter price is working fine
 
 @regression
-Scenario Outline: Filter Price
+Scenario Outline: Filter from High to Low
 	Given user is on Singapore Hotel search page
 	When user selects the destination
 	|Singapore|
@@ -19,3 +19,9 @@ Examples:
 	|priceFilter|order|
 	|low to high|ascending |
 	|high to low|descending|
+
+@sanity
+Scenario: Verify Login functionality
+	Given user is on Singapore Hotel registration page
+	When user enters valid inputs
+	Then user should be successfully able to register

@@ -5,6 +5,7 @@ import java.util.List;
 import Base.BaseUtil;
 import Cucumber.SGhotel.Pages.ChoseHotel;
 import Cucumber.SGhotel.Pages.HotelSearch;
+import Cucumber.SGhotel.Pages.Registration;
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -64,4 +65,22 @@ public class filterPriceSteps {
     public void price_will_be_filtered_in(String order) throws Throwable {
     	(new ChoseHotel(base.Driver)).checkAscendingDescendingOrder(order);
     }
+    
+    @Given("^user is on Singapore Hotel registration page$")
+    public void user_is_on_singapore_hotel_registration_page() throws Throwable {
+    	Registration reg = new Registration(base.Driver);
+    	reg = (new HotelSearch(base.Driver)).NavigateToRegistrationPage();
+    }
+
+    @When("^user enters valid inputs$")
+    public void user_enters_valid_inputs() throws Throwable {
+    	(new Registration(base.Driver)).verifySuccessfulNavigationToRegistrationPage();
+    	(new Registration(base.Driver)).fillRegistrationForm();
+    }
+
+    @Then("^user should be successfully able to register$")
+    public void user_should_be_successfully_able_to_register() throws Throwable {
+    	(new Registration(base.Driver)).verifySuccessfulRegistrationFromHeader();
+    }
+    
 }
