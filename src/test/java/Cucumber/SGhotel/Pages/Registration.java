@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import Cucumber.SGhotel.Helper.ReadXML;
 import Cucumber.SGhotel.Helper.ReusableLibrary;
-import junit.framework.Assert;
+import org.junit.Assert;
 
 public class Registration {
 
