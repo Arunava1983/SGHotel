@@ -41,7 +41,7 @@
 						</goals>
 						<configuration>
 							<skip>false</skip>
-							<forkCount>1</forkCount>
+							<forkCount>2</forkCount>
 							<reuseForks>false</reuseForks>
 							<argLine>-Duser.language=en</argLine>
 							<argLine>-Xmx1024m</argLine>
