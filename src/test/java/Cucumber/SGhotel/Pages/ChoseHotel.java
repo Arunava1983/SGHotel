@@ -75,6 +75,7 @@ public class ChoseHotel{
 	{
 		try
 		{
+			Thread.sleep(rs.iMaxTimeout*1000);
 			rs.HoverMouse(lnkPriceFilter);
 			if(order.equals("high to low"))
 			{
