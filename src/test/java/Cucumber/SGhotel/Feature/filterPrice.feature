@@ -6,9 +6,9 @@ Scenario Outline: Filter from High to Low
 	When user selects the destination
 	|Singapore|
 	And user selects checkin Date
-	|10/01/2019|
+	|15/01/2019|
 	And user selects checkout date
-	|12/01/2019|
+	|17/01/2019|
 	And selects "1" Room, "1" Adult, "0" Children and click on Search button
 	And select the popular Filters
 	|Free Breakfast|Pool|Free wifi|
