@@ -48,15 +48,23 @@ public class ChoseHotel{
 	 */
 	public void SelectPopularFilters(String filter1, String filter2, String filter3)
 	{
-		String arr[] = {filter1, filter2,filter3};
-		List<String> filter = Arrays.asList(arr);
-		
-		for(String str: filter)
+		try
 		{
-			WebElement wb = driver.findElement(By.xpath("//label[text()='"+str+"']/preceding-sibling::input[@type='checkbox']"));
-			rs.logClick(wb);
+			String arr[] = {filter1, filter2,filter3};
+			List<String> filter = Arrays.asList(arr);
+		
+			for(String str: filter)
+			{
+				WebElement wb = driver.findElement(By.xpath("//label[text()='"+str+"']/preceding-sibling::input[@type='checkbox']"));
+				rs.logClick(wb);
+			}
+			rs.pageSync();
+			Thread.sleep(rs.iMaxTimeout*1000);
 		}
-		rs.pageSync();
+		catch(Exception e)
+		{
+			Assert.fail(e.getMessage());
+		}
 	}
 	
 	/**
@@ -65,16 +73,24 @@ public class ChoseHotel{
 	 */
 	public void selectPriceFilter(String order)
 	{
-		rs.HoverMouse(lnkPriceFilter);
-		if(order.equals("high to low"))
+		try
 		{
-			rs.logClick(lnkHighToLowPrice);
+			rs.HoverMouse(lnkPriceFilter);
+			if(order.equals("high to low"))
+			{
+				rs.logClick(lnkHighToLowPrice);
+			}
+			else
+			{
+				rs.logClick(lnkLowToHighPrice);
+			}
+			rs.pageSync();
+			Thread.sleep(rs.iMaxTimeout*1000);	
 		}
-		else
+		catch(Exception e)
 		{
-			rs.logClick(lnkLowToHighPrice);
+			Assert.fail(e.getMessage());
 		}
-		rs.pageSync();
 	}
 	
 	/**
